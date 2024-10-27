@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
+}
+:root{
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+}
+section{
+    width: 80%;
+    margin: 3rem auto;
+}
+.container{
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    grid-template-areas: 
+    "one one two five"
+    "three four four five";
+}
+@media screen and (max-width: 375px) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    }
+    
+}
+.content{
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25)
+}
+.id{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+img{
+    border-radius: 50%;
+    border: 2px solid;
+}
+.content p:first-of-type{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.content p:last-of-type{
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.txt{}
+.one{
+    grid-area: one;
+    background-color: var(--Moderate-violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-position-x: 90%;
+    background-repeat: no-repeat;
+    
+}
+.two{
+    grid-area: two;
+    background-color: var(--Very-dark-grayish-blue);
+    
+}
+.three{
+    grid-area: three;
+    background-color: var(--White);
+    
+}
+.four{
+    grid-area: four;
+    background-color: var(--Very-dark-blackish-blue);
+    
+}
+.five{
+    grid-area: five;
+    background-color: var(--White);
+}
+.one img{
+    border-color: var(--Very-dark-grayish-blue);
+}
+.two img{
+    border-color: var(--Light-gray);
+}
+.three img{
+}
+.four img{
+    border-color: var(--Moderate-violet);
+}
+.five img{
+    
+}
+
+.three, .five{
+    color: var(--Very-dark-blackish-blue);
+}
+.one, .two, .four{
+    color: var(--Light-grayish-blue);
+}
